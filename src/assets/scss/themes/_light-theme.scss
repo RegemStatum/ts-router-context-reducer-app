@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+.light-theme {
+  background-color: getLightThemeColor("bg-color");
+  color: getLightThemeColor("text-color");
+
+  h1 {
+    color: getLightThemeColor("heading-1-color");
+  }
+  h2 {
+    color: getLightThemeColor("heading-2-color");
+  }
+  h3 {
+    color: getLightThemeColor("heading-3-color");
+  }
+  h4 {
+    color: getLightThemeColor("heading-4-color");
+  }
+  h5 {
+    color: getLightThemeColor("heading-5-color");
+  }
+  a {
+    color: getLightThemeColor("heading-1-color");
+  }
+  p {
+    color: getLightThemeColor("text-color");
+  }
+
+  .btn {
+    border: 2px solid getLightThemeColor("color-1");
+    color: getLightThemeColor("color-1");
+
+    &:hover {
+      @include boxShadow(getLightThemeColor("color-1"));
+    }
+  }
+
+  .accent {
+    color: getLightThemeColor("color-1");
+    text-shadow: none;
+  }
+
+  // navigation
+  .sidebar {
+    background-color: getLightThemeColor("heading-color-1");
+    border-color: getLightThemeColor("color-2");
+    .nav {
+      a {
+        color: getLightThemeColor("color-2");
+      }
+    }
+  }
+
+  .change-theme-btns {
+    background-color: getLightThemeColor("color-1");
+
+    .change-theme-btn {
+      color: getLightThemeColor("bg-color");
+      &:hover {
+        color: getLightThemeColor("color-2");
+      }
+    }
+  }
+
+  .login-page {
+    h2 {
+      text-shadow: none;
+    }
+
+    .user-info {
+      h4 span {
+        color: getLightThemeColor("text-color");
+      }
+
+      h5 {
+        color: getLightThemeColor("color-1");
+      }
+    }
+  }
+
+  .control .control-time {
+    p {
+      color: getMainColor();
+    }
+  }
+}

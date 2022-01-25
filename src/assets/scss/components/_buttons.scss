@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+@use "../base/fonts" as *;
+
+.btn {
+  display: block;
+  padding: getPadding(500) getPadding(800);
+  border: 2px solid getColor("color-1");
+  background-color: transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: getColor("color-1");
+  cursor: pointer;
+  @include transition(box-shadow);
+  @include radius;
+  @include text(300);
+
+  &:hover {
+    @include boxShadow;
+  }
+}
+
+.btn-close {
+  display: block;
+  font-size: getFontSize(900);
+  background-color: getMainColor("clr-red-dark");
+  color: getColor("bg-color");
+  cursor: pointer;
+  @include radius;
+}
